@@ -1,7 +1,5 @@
 package codelean;
 
-import com.company.Main;
-
 public class Circle {   // class name
     private double radius; // variable
     private String color;

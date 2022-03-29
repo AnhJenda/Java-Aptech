@@ -1,3 +1,5 @@
+package CodeSnipperSS6;
+
 public class Student {
     String studName;
     int studAge;
@@ -6,8 +8,8 @@ public class Student {
         studAge = 26;
     }
     void display(){
-        System.out.println("Student Name: " + studName);
-        System.out.println("Student Age: " + studAge);
+        System.out.println("CodeSnipperSS6.Student Name: " + studName);
+        System.out.println("CodeSnipperSS6.Student Age: " + studAge);
     }
 
     public static void main(String[] args) {

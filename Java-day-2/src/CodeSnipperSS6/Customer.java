@@ -1,4 +1,4 @@
-// Code snippet 3
+package CodeSnipperSS6;// Code snippet 3
 
 public class Customer {
     // Declare instance variables
@@ -11,7 +11,7 @@ public class Customer {
      * members of the class
      */
     public static void main(String[] args) {
-        // Declares and instantiates an object of type Customer
+        // Declares and instantiates an object of type CodeSnipperSS6.Customer
         Customer objCustomer1 = new Customer();
         // Accesses the instance variables to store values
         objCustomer1.customerID = 100;
@@ -20,9 +20,9 @@ public class Customer {
         objCustomer1.customerAge = 30;
 
         // Displays the objCustomer1 object details
-        System.out.println("Customer Identification Number: " + objCustomer1.customerID);
-        System.out.println("Customer Name: " + objCustomer1.customerName);
-        System.out.println("Customer Address: " + objCustomer1.customerAddress);
-        System.out.println("Customer Age: " + objCustomer1.customerAge);
+        System.out.println("CodeSnipperSS6.Customer Identification Number: " + objCustomer1.customerID);
+        System.out.println("CodeSnipperSS6.Customer Name: " + objCustomer1.customerName);
+        System.out.println("CodeSnipperSS6.Customer Address: " + objCustomer1.customerAddress);
+        System.out.println("CodeSnipperSS6.Customer Age: " + objCustomer1.customerAge);
     }
 }

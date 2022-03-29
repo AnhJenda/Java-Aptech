@@ -1,4 +1,4 @@
-package com.company;
+package CodeSnipperSS6;
 
 public class Main {
 
