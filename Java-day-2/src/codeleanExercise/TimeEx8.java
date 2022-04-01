@@ -37,7 +37,7 @@ public class TimeEx8 {
 
     @Override
     public String toString() {
-        return hour + "/" + minute + "/" + second  ;
+        return hour + ":" + minute + ":" + second  ;
     }
     public TimeEx8 nextSecond(){
         if(second<59){
@@ -72,7 +72,6 @@ public class TimeEx8 {
             minute=59;
             second=59;
         }
-
         return this;
     }
 
