@@ -52,7 +52,7 @@ public class AccountEx6 {
         if(amount<=balance){
             another.balance += amount;
             balance-=amount;
-            System.out.println("Chuyen tien thanh cong.");
+            System.out.println("Chuyen tien thanh cong");
 
         } else {
             System.out.println("Chuyen tien that bai");

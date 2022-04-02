@@ -27,8 +27,8 @@ public class EmployeeEx4 {
     public int getSalary(){
         return salary;
     }
-    public void setSalary(int EmSalary){
-        this.salary = EmSalary;
+    public void setSalary(int Salary){
+        this.salary = Salary;
     }
     public int getAnnualSalary(){
         int annualSalary;
