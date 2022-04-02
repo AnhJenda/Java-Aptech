@@ -35,9 +35,9 @@ public class EmployeeEx4 {
         annualSalary = salary * 12;
         return annualSalary;
     }
-    public int raiseSalary(){
+    public int raiseSalary(int percent){
         int raiseSalary;
-        raiseSalary = salary + salary * 10 / 100;
+        raiseSalary = salary + salary * percent / 100;
         return raiseSalary;
     }
     public String toString(){
