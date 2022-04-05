@@ -52,17 +52,6 @@ public class DateEx7 {
     }
 
     public String toString() {
-        String day, month;
-        if (this.day < 10) {
-            day = "0" + this.day;
-        } else {
-            day = "" + this.day;
-        }
-        if (this.month < 10) {
-            month = "0" + this.month;
-        } else {
-            month = "" + this.month;
-        }
-        return "Date: " + day + "/" + month + "/" + year;
+        return String.format("%02d/%02d/%4d", this.day, this.month, this.year);
     }
 }

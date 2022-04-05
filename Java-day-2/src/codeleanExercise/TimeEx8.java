@@ -19,6 +19,7 @@ public class TimeEx8 {
         if (hour >= 0 && hour <= 23){
             this.hour = hour;
         } else {
+            this.hour = 0;
             System.out.println("The Hour can not be smaller than 0 and bigger than 23");
         }
     }
@@ -28,9 +29,10 @@ public class TimeEx8 {
     }
 
     public void setMinute(int minute) {
-        if (minute >= 0 && minute <= 50){
+        if (minute >= 0 && minute <= 59){
             this.minute = minute;
         } else {
+            this.minute = 0;
             System.out.println("The minute can not be smaller than 0 and bigger than 59");
         }
     }
@@ -43,6 +45,7 @@ public class TimeEx8 {
         if (second >= 0 && second <= 59) {
             this.second = second;
         } else {
+            this.second = 0;
             System.out.println("The second can not be smaller than 0 and bigger than 59");
         }
     }
@@ -58,56 +61,35 @@ public class TimeEx8 {
 
     @Override
     public String toString() {
-        String hour, minute, second;
-        if (this.hour < 10) {
-            hour = "0" + this.hour;
-        } else {
-            hour = "" + this.hour;
-        }
-        if (this.minute < 10) {
-            minute = "0" + this.minute;
-        } else {
-            minute = "" + this.minute;
-        }
-        if (this.second < 10) {
-            second = "0" + this.second;
-        } else {
-            second = "" + this.second;
-        }
-        return hour + ":" + minute + ":" + second  ;
+        return String.format("%2d:%2d:%2d", this.hour, this.minute, this.second);
     }
     public TimeEx8 nextSecond(){
-        if(second<59){
-            second++;
-        }else if(minute<59){
-            minute++;
-            second=0;
-        }else if(hour<23){
-            hour++;
-            minute=0;
-            second=0;
-        }else {
-            hour=0;
-            minute=0;
-            second=0;
+        second++;
+        if(second >= 60){
+           this.second = 0;
+           minute++;
+           if (minute >= 60){
+               this.minute = 0;
+               hour++;
+               if (hour >=24){
+                   this.hour = 0;
+               }
+           }
         }
-
         return this;
     }
     public TimeEx8 previousSecond(){
-        if(second>0){
-            second--;
-        }else if(minute>0){
+        second--;
+        if (second < 0) {
+            this.second = 59;
             minute--;
-            second=59;
-        }else if(hour>0){
-            hour--;
-            minute=59;
-            second = 59;
-        }else {
-            hour=23;
-            minute=59;
-            second=59;
+            if (minute < 0) {
+                this.minute = 59;
+                hour--;
+                if (hour < 0){
+                    this.hour--;
+                }
+            }
         }
         return this;
     }

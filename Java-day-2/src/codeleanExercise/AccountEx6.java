@@ -39,23 +39,23 @@ public class AccountEx6 {
     }
 
     public int debit(int amount){
-        if(amount<=balance){
-            balance-=amount;
-            System.out.println("Rut tien thanh cong.");
+        if(amount <= balance){
+            this.balance-=amount;
+            System.out.println("Withdraw successfully!");
         } else {
-            System.out.println("Rut tien that bai");
+            System.out.println("Your Balance is not enough!");
         }
         return balance;
     }
 
     public int transferTo(AccountEx6 another, int amount ){
-        if(amount<=balance){
+        if(amount <= balance){
+            this.balance -= amount;
             another.balance += amount;
-            balance-=amount;
-            System.out.println("Chuyen tien thanh cong");
+            System.out.println("Success!");
 
         } else {
-            System.out.println("Chuyen tien that bai");
+            System.out.println("Your balance is not enough!");
         }
         return balance;
     }
@@ -66,5 +66,14 @@ public class AccountEx6 {
                 ", name='" + name + '\'' +
                 ", balance=" + balance +
                 '}';
+    }
+
+    public static void main(String[] args) {
+        AccountEx6 acc1 = new AccountEx6("acc1", "Duy Linh", 100000000);
+        AccountEx6 acc2 = new AccountEx6("acc2", "Quy Vu", 10000000);
+
+        acc1.transferTo(acc2, 55555);
+        System.out.println(acc1);
+        System.out.println(acc2);
     }
 }
