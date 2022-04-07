@@ -114,25 +114,26 @@ public class LineEx2 {
     }
 
 
-    public boolean intersects(Line another){
-        double x1=another.getBeginX(); //31
-        double y1=another.getBeginY();//34
-        double x2=another.getEndX();//32
-        double y2=another.getEndY();//33
+    public boolean intersects(LineEx2 another){
+        double x1=another.getBeginX();
+        double y1=another.getBeginY();
+        double x2=another.getEndX();
+        double y2=another.getEndY();
+        double x3=another.getBeginX();
+        double y3=another.getBeginY();
+        double x4=another.getEndX();
+        double y4=another.getEndY();
+
 
         double check1 = (y1-y2)*(begin.getX()-x1) + (x2-x1)*(begin.getY()-y1);
         double check2 = (y1-y2)*(end.getX()-x1) + (x2-x1)*(end.getY()-y1);
+        double check3 = (y3-y4)*(begin.getX()-x3) + (x4-x3)*(begin.getY()-y3);
+        double check4 = (y3-y4)*(end.getX()-x3) + (x4-x3)*(end.getY()-y3);
 
-        if(check1*check2<0){
+        if (check1*check2 < 0 || check3*check4 < 0){
             return true;
         } else {
             return false;
         }
-
-
-
-
-
     }
-
 }
