@@ -11,6 +11,7 @@ public class Flight {
 
     public Flight() {
         number = 0;
+        destination = "";
     }
 
     public Flight(int number, String destination) {
